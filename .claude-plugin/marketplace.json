@@ -1,0 +1,15 @@
+{
+  "name": "seturos-plugins",
+  "description": "Seturos: shared work memory for coding tools, so a session in one tool continues in the next.",
+  "owner": {
+    "name": "Seturos",
+    "url": "https://app.seturos.com"
+  },
+  "plugins": [
+    {
+      "name": "seturos",
+      "source": "./",
+      "description": "Shared work memory across coding tools, scoped to each repository."
+    }
+  ]
+}
