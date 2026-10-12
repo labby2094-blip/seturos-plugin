@@ -1,0 +1,17 @@
+{
+  "name": "seturos",
+  "version": "0.1.0",
+  "description": "Shared work memory across your AI tools. Pick up in Cursor where your last session in another tool left off, scoped to the repository you are in, and look up the people, projects and decisions in your org.",
+  "author": {
+    "name": "Seturos",
+    "email": "support@seturos.com"
+  },
+  "homepage": "https://app.seturos.com/docs",
+  "repository": "https://github.com/labby2094-blip/seturos-plugin",
+  "license": "MIT",
+  "keywords": ["memory", "context", "handoff", "continuity", "decisions", "org", "mcp"],
+  "logo": "assets/logo.png",
+  "mcpServers": "mcp.json",
+  "skills": "skills",
+  "commands": "commands"
+}

@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "seturos": {
+      "url": "https://app.seturos.com/api/mcp"
+    }
+  }
+}
