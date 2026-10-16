@@ -1,7 +1,7 @@
 {
   "name": "seturos",
-  "version": "0.1.0",
-  "description": "Shared work memory across coding tools. Pick up in Claude Code where Codex or Cursor left off, scoped to the repository you are in.",
+  "version": "0.2.0",
+  "description": "Shared work memory across coding tools. Pick up in Claude Code where Codex or Cursor left off, scoped to the repository you are in. Optional automatic memory keeps what a session settled through compaction (off until /seturos:connect).",
   "author": {
     "name": "Seturos",
     "url": "https://app.seturos.com"
@@ -9,5 +9,7 @@
   "homepage": "https://app.seturos.com",
   "repository": "https://github.com/labby2094-blip/seturos-plugin",
   "license": "MIT",
-  "keywords": ["memory", "context", "handoff", "continuity", "org"]
+  "keywords": ["memory", "context", "handoff", "continuity", "compaction", "org"],
+  "commands": ["./claude-code/commands/connect.md", "./claude-code/commands/disconnect.md"],
+  "hooks": "./claude-code/hooks.json"
 }

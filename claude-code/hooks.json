@@ -1,0 +1,23 @@
+{
+  "description": "Seturos memory for Claude Code: what a session settles survives compaction and carries into the next session, in any tool. Off until you run /seturos:connect.",
+  "hooks": {
+    "PreCompact": [
+      { "matcher": "manual|auto", "hooks": [{ "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/claude-code/hooks/seturos-compact-hook.cjs\" pre-compact --plugin", "timeout": 30 }] }
+    ],
+    "SessionStart": [
+      { "matcher": "startup|resume|clear|compact", "hooks": [{ "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/claude-code/hooks/seturos-compact-hook.cjs\" session-start --plugin", "timeout": 30 }] }
+    ],
+    "UserPromptSubmit": [
+      { "hooks": [{ "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/claude-code/hooks/seturos-compact-hook.cjs\" prompt --plugin", "timeout": 10 }] }
+    ],
+    "PreToolUse": [
+      { "matcher": "Bash|Edit|Write|MultiEdit|NotebookEdit", "hooks": [{ "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/claude-code/hooks/seturos-compact-hook.cjs\" pre-tool --plugin", "timeout": 5 }] }
+    ],
+    "Stop": [
+      { "hooks": [{ "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/claude-code/hooks/seturos-compact-hook.cjs\" stop --plugin", "timeout": 15 }] }
+    ],
+    "SessionEnd": [
+      { "hooks": [{ "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/claude-code/hooks/seturos-compact-hook.cjs\" session-end --plugin", "timeout": 5 }] }
+    ]
+  }
+}
